@@ -1,0 +1,206 @@
+body {
+    background: #ffffff; 
+    margin: 0; 
+    padding: 0; 
+    width: 100%;
+    overflow-x: hidden;
+    background-size: cover;
+} 
+
+.grid-container{
+    display: -ms-flexbox; 
+    display: flex;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+  }
+.grid-container:after {
+    content: "";
+    display: table;
+    clear: both;
+    
+  }
+  
+  span { 
+     color: white; 
+     font: bold 24px/45px Century Gothic; 
+     letter-spacing: 2px;  
+     background: rgb(0, 0, 0); /* fallback color */
+     background: rgba(0, 0, 0, 0.7);
+     padding: 10px; 
+  }
+  
+  .image-gallery {
+    margin: auto;
+    width: 1000px;
+    height: 100%;
+    position: relative;
+  }
+  .image-container {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+  }
+  .thumbnails {
+    width: 100%;
+    display: flex;
+  }
+  .thumbnails label {
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    background-size: cover;
+    margin: 0;
+    flex: 1 1 150px;
+    cursor: pointer;
+  }
+  .image-1, .image-2, .image-3, .image-4, .image-5, .image-6 {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: all 1.2s ease-out;
+  }
+  .image-1,
+  .thumbnails label[for="image1"] {
+    background-image: url(../images/home/slide_imgs/Vebanad-Kayal_1.jpg)
+  }
+  .image-2,
+  .thumbnails label[for="image2"] {
+    background-image: url(../images/home/slide_imgs/Kalamandalam_2.jpg)
+  }
+  .image-3,
+  .thumbnails label[for="image3"] {
+    background-image: url(../images/home/slide_imgs/Athirapally_3.jpg)
+  }
+  .image-4,
+  .thumbnails label[for="image4"] {
+    background-image: url(../images/home/slide_imgs/Nelliampathi_4.jpg)
+  }
+  
+  .image-5,
+  .thumbnails label[for="image5"] {
+    background-image:url(../images/home/slide_imgs/Kapad-Beach_5.jpg)
+  }
+  
+  .image-6,
+  .thumbnails label[for="image6"] {
+    background-image:url(../images/home/slide_imgs/Jatayu-Rock_6.jpg)
+  }
+  #image1:checked + .image-1,
+  #image2:checked + .image-2,
+  #image3:checked + .image-3,
+  #image4:checked + .image-4,
+  #image5:checked + .image-5,
+  #image6:checked + .image-6 {
+    opacity: 1;
+  }
+  .image-gallery input[type="radio"] {
+    position: absolute;
+    top: 550px;
+    z-index: 100;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    background-color: #00000033;
+    height: 16px;
+    width: 16px;
+    border: 3px solid #f1f1f1;
+    border-radius: 16px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 1px 4px #00000088;
+  }
+  .image-gallery input[type="radio"]:hover {
+    background-color: #f7f7f780;
+  }
+  .image-gallery input[type="radio"]:checked {
+    background-color: #f1f1f1;
+  }
+  .image-gallery input[type="radio"]:nth-of-type(1) {
+    left: 50%;
+    margin-left: -60px;
+  }
+  .image-gallery input[type="radio"]:nth-of-type(2) {
+    left: 50%;
+    margin-left: -36px;
+  }
+  .image-gallery input[type="radio"]:nth-of-type(3) {
+    left: 50%;
+    margin-left: -12px;
+  }
+  .image-gallery input[type="radio"]:nth-of-type(4) {
+    left: 50%;
+    margin-left: 12px;
+  }
+  .image-gallery input[type="radio"]:nth-of-type(5) {
+    left: 50%;
+    margin-left: 36px;
+  }
+  
+  .image-gallery input[type="radio"]:nth-of-type(6) {
+    left: 50%;
+    margin-left: 60px;
+  }
+  
+   /* Sidebar/left column */
+   /* .row {  
+    display: -ms-flexbox; 
+    display: flex;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+    }
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+      
+    } */
+
+    .side {
+    -ms-flex: 30%; 
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+    height: 97.5%;
+    }
+    .card{
+      top: 20px;
+    }
+    /* Main column */
+    .main {   
+      -ms-flex: 70%; 
+      flex: 70%;
+      background-color: white;
+      padding: 20px;
+      }
+    
+      /* .main-img{
+        width: 50%;
+        margin-left: 1.5%;
+        margin-top: 5%;
+      } */
+    
+      .main h1{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align:center;
+      } 
+
+      .topbtn{
+        position:static;
+        float: right;
+        width: 50px;
+        height: 50px;
+        margin-top: -60px;
+        margin-right: 20px;
+        background-color: black;
+        bottom: 40px;
+
+        text-decoration: none;
+        text-align: center;
+        line-height: 50px;
+        color: white;
+      }
